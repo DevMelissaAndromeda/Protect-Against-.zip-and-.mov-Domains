@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "Protect Against (@)ASPERAND.zip Domains",
+    "description": "Warns if links/redirect elements as potentially dangerous if they contain an '@' and '.zip', as it makes everything behind said symbol completely discarded, allowing malicious users to make official looking URLs illegally, potentially tricking you into downloading unofficial/malicious files.",
+    "author": "Melissa Andromeda",
+
+    "host_permissions": [
+        "<all_urls>"
+    ],
+
+    "permissions": [
+        "tabs",
+        "scripting",
+        "background"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+
+    "background": {
+        "service_worker": "index.js"
+    }
+}
