@@ -21,18 +21,6 @@
         "background"
     ],
 
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "run_at": "document_end",
-            "js": [
-                "index.js"
-            ]
-        }
-    ],
-
     "background": {
         "service_worker": "index.js"
     }

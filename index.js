@@ -1,7 +1,7 @@
 console.log(`PA@D extension loaded.`)
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    console.log(`New page detected`);
+    console.log(`New tab detected.`);
     function verifyLink() {
         const links = document.querySelectorAll('a');
         links.forEach((link) => {
@@ -17,5 +17,5 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     chrome.scripting.executeScript({
         target: { tabId: tabId },
         func: verifyLink,
-    }).then(() => console.log('Injected a function!'));
+    }).then(() => console.log('Verified links in page.'));
 });
