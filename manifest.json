@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "version": "1.0.0",
-    "name": "Protect Against @.zip Domains",
-    "description": "Marks '@.zip' domains in red as dangerous.",
+    "name": "Protect Against @.zip & @.mov Domains",
+    "description": "Marks '@.zip' & @.mov' domains in red as dangerous.",
     "author": "Melissa Andromeda",
     "icons": {
         "16": "images/icon_16.png",
